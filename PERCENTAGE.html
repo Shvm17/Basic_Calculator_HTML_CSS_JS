@@ -1,0 +1,309 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Percentage</title>
+    <style>
+        body{
+            height: 100vh;
+            background-position: center;
+            background:linear-gradient( to right, rgba(7, 146, 81, 0.5),rgb(141, 157, 165), rgba(57, 95, 110, 0.5));
+            display: flex;
+            
+            
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+        #big-container{
+        background-color: #fff; 
+        height: 60%;
+        padding: 40px;
+        background-color: rgb(49, 42, 42);
+        border-radius: 30px;
+        /* border-left: rgb(37, 228, 84) 8px solid; */
+    
+
+        }
+        #container{
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: rgb(49, 42, 42);
+            width: 100%;
+            border-radius: 4px 30px 30px 4px;
+            /* box-shadow: rgba(0, 0, 0, 0.4) 10px 0px 20px 10px; */
+            border-left: rgb(51, 216, 134) 10px solid;
+         
+            
+        }
+        #side1{
+            position: relative;
+           padding: 15px 40px 15px 10px;
+          
+           border-left: 6px solid rgb(191, 218, 129);
+           color: greenyellow;
+           /* height: 10rem; */
+           border-radius: 2px 20px 20px 2px;
+           box-shadow: rgba(0, 0, 0, 0.4) 5px 0px 70px ;
+           margin: 0px 0px 0 30px;
+           /* width: 100px; */
+
+        }
+        .para{
+            font-size: 24px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+        }
+        #para1{
+            font-size: 50px;
+            margin: 0px 5px;
+            /* height:60px; */
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        #para2{
+            font-size: 25px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #para3{
+            font-size: 35px;
+            /* height: 30px; */
+        }
+        #side2{
+            /* display: block ; */
+            padding: 40px 80px;
+            /* margin: 0px 0 ; */
+        }
+        #button{
+            padding: 5px 0px 0 0;
+            position: relative;
+            top: 20px;
+        }
+        #relate{
+            /* mask-position: center; */
+            /* place-self: 40px; */
+           /* margin:  30px; */
+            /* background-color: rgb(143, 175, 91); */
+            color: rgb(204, 235, 94);
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0px 10px;
+        }
+        hr{
+            margin: 30px 100px;
+            color: rgb(63, 52, 8);
+            border:  2px solid wheat ;
+            border-radius: 60px;
+            
+        }
+        .input{
+            /* width: 100%; */
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 5px 5px;
+            background-color: rgba(46, 42, 42);
+            border:1.5px solid rgb(28, 240, 151);
+            /* font-weight:600; */
+            /* border-bottom: 1px solid rgb(17, 16, 16); */
+            color: rgb(149, 223, 65);
+            border-radius: 20px;
+            /* box-shadow: rgba(71, 71, 71, 0.4) 5px 0px  20px; */
+            text-align: center;
+            /* text-decoration: none; */
+
+            
+        }
+   
+        
+        #subject6{
+            font-size: 18px;
+            color: rgb(240, 126, 26);
+        }
+        #btn{
+            padding: 10px 23px;
+            font-size: 15px;
+            border: none;
+            /* background: linear-gradient(to left  ,rgba(2, 97, 76,0.5) ,rgba(201, 184, 90, 0.5), rgba(125, 194, 111, 0.5)); */
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: rgb(255, 255, 255);
+            background-color: rgb(82, 173, 22);
+            cursor: pointer;
+            /* box-shadow: rgba(0, 0, 0, 0.5) 5px 0 30px; */
+            border-radius: 4px;
+            
+        }
+        #btn:hover{
+             background:rgb(82,173,22); 
+             padding: 10px 35px 10px 35px;
+             transition: .8s;
+            /* background-color: rgb(67, 201, 74); */
+            /* background: linear-gradient(to left bottom ,rgb(2, 97, 76), rgba(125, 194, 111, 0.5)); */
+            /* border: 0 2px 0 2px solid tomato; */
+           
+        
+
+         }  
+        #side3{
+            height: 60%;
+            width: 130px;
+            border-radius:5px 30px 30px 5px;
+            margin: 0 0 0 5px;
+            background-color:rgba(49, 42, 42,1);
+            border-left: 8px solid rgb(160, 248, 133, 1);
+        }
+        #help{
+            font-family: serif;
+            text-align:center;
+            padding: 15px 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color:rgb(186, 192, 99) ;
+            font-size: 16px;
+            font-weight: 100px;
+        }
+        h2{
+            font-family:monospace;
+            color: rgb(81, 194, 37);
+            
+        }
+        #design{
+            color: white;
+            font-size: 20px;
+        }
+        #text{
+            color: rgb(204, 120, 9);
+        }
+    </style>
+</head>
+<body>
+    <div id="big-container">
+    <div id="container">
+        <div id="side1">
+            <p class="para"id="para1">Student</p>
+            <p class="para" id="para2">Percentage</p>
+            <p class="para" id="para3">Calculator</p>  
+        </div>
+        <div id="side2">
+            <input type="number" class="input" id="subject1" placeholder="Marks in subject1"><br><br>
+            <input type="number" class="input" id="subject2" placeholder="Marks in subject2"><br><br>
+            <input type="number" class="input" id="subject3" placeholder="Marks in subject3"><br><br>
+            <input type="number" class="input" id="subject4" placeholder="Marks in Subject4"><br><br>
+            <input type="number" class="input" id="subject5" placeholder="Marks in Subject5"><br><br>
+            <input type="number" class="input" id="subject6" placeholder="Maximum marks">
+            
+        <div id="button">
+            <button id = "btn" onclick="calculate()"><span></span>Calculate</button>
+        </div>
+      
+       
+          
+        </div>
+       
+
+        <!-- <div id="button">
+            <button id = "btn" onclick="calculate()">Calculate Now</button>
+        </div> -->
+    </div>
+    <!-- <hr > -->
+    <div id = "relate">
+        <p id = "text"></p> 
+    </div>
+</div>
+ <div id="side3">
+     <h2>Guide</h2>
+     <!-- <hr> -->
+     <p id = "help">If You wanna calculate percentage of subjects less than 5 then assign "0" to remaining subject/s </p>
+     <p id = "design">....||....</p>
+</div>
+
+   
+    <script>
+        let sub1 ; 
+        let sub2 ;
+        let sub3 ;
+        let sub4 ;
+        let sub5 ;
+        let sub6 ;
+        let total ;
+       
+         
+    let val1 = document.getElementById("subject1");
+    val1.addEventListener("input", function(){
+        sub1 = Number(this.value);
+        console.log(sub1);
+        
+    });
+    let val2 = document.getElementById("subject2");
+    val2.addEventListener("input", function(){
+        sub2 = Number(this.value);
+        console.log(sub2);
+    })
+    let val3 = document.getElementById("subject3");
+    val3.addEventListener("input", function(){
+        sub3 = Number(this.value);
+        console.log(sub3);
+    });
+    let val4 = document.getElementById("subject4");
+    val4.addEventListener("input", function(){
+        sub4 = Number(this.value);
+        console.log(sub4);
+    });
+    let val5 = document.getElementById("subject5");
+    val5.addEventListener("input", function(){
+        sub5 = Number(this.value);
+        console.log(sub5);
+    });
+    let val6= document.getElementById("subject6");
+    val6.addEventListener("input", function(){
+        total = Number(this.value);
+        console.log(total);    
+    });
+//  console.log(val6.value);
+    // console.log(typeof (total));
+  let elm1 ;
+  let txt = document.getElementById("text");
+
+  
+    function calculate(){
+        totalMarks = (sub1 + sub2 + sub3 + sub4 + sub5 );
+       let  record = totalMarks/total;
+       console.log(totalMarks);
+
+       let elm1 = record*100;
+    //  console.log( typeof elm1);
+       
+        if(total < totalMarks){
+           
+            let alrt= alert("Error!! Your Total marks should be less than or equals to maximum marks");
+            txt.innerHTML = "Error";
+            
+            
+        }else{
+         
+            if(90 <= elm1 && elm1  <= 100){
+                txt.innerHTML = `Great Work, Your Percentage is ${elm1.toFixed(2)} % Passed :)`
+
+            }
+            else if(elm1 >33 && elm1 < 90){
+                txt.innerHTML = `Your Percentage is ${elm1.toFixed(2)}% Passed. `
+            }
+               
+               
+            else if(elm1 <= 33 && elm1 >= 0){
+                txt.innerHTML = `Your Percentage is ${elm1.toFixed(2)} %  Failed!! ` 
+            }
+            else {
+                txt.innerHTML = "Error! Please Type Your Marks "
+            }
+           
+        }
+        
+}
+       
+           
+    
+
+    </script>
+    
+</body>
+</html>
